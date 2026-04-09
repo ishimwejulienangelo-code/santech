@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bella Pizza – Authentic Italian Pizza</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-logo">🍕 Bella Pizza</div>
+    <ul class="nav-links">
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="cart-btn" onclick="toggleCart()">🛒 Cart <span class="cart-count">0</span></button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Wood-Fired Pizza,<br/>Made with Love</h1>
+      <p>Fresh ingredients, authentic Italian recipes, baked to perfection.</p>
+      <a href="#menu" class="btn-primary">Order Now</a>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section class="menu" id="menu">
+    <h2>Our Menu</h2>
+    <p class="section-sub">Handcrafted with the finest ingredients</p>
+    <div class="menu-grid" id="menuGrid"></div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about-img">🍕</div>
+    <div class="about-text">
+      <h2>Our Story</h2>
+      <p>Founded in 1998 by the Rossi family, Bella Pizza brings the heart of Naples to your table. Every pizza is hand-stretched, topped with San Marzano tomatoes, and baked in our 900°F wood-fired oven.</p>
+      <ul>
+        <li>✅ Fresh dough made daily</li>
+        <li>✅ Imported Italian ingredients</li>
+        <li>✅ Family recipes since 1998</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <h2>Find Us</h2>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <p>📍 123 Olive Street, Little Italy, NY 10013</p>
+        <p>📞 (212) 555-0192</p>
+        <p>✉️ hello@bellapizza.com</p>
+        <p>🕐 Mon–Sun: 11am – 11pm</p>
+      </div>
+      <form class="contact-form" onsubmit="submitForm(event)">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Message or reservation request..." rows="4" required></textarea>
+        <button type="submit" class="btn-primary">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Bella Pizza. Made with ❤️ and mozzarella.</p>
+  </footer>
+
+  <!-- CART SIDEBAR -->
+  <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3>Your Order</h3>
+      <button onclick="toggleCart()">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems"><p class="empty-cart">Your cart is empty.</p></div>
+    <div class="cart-footer">
+      <p class="cart-total">Total: $<span id="cartTotal">0.00</span></p>
+      <button class="btn-primary" onclick="checkout()">Checkout</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

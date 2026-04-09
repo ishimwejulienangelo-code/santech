@@ -1,0 +1,72 @@
+site_name: Angelo's Internship Portfolio
+site_description: Internship portfolio of Ishimwe Angelo Julien — Networking & Internet Technology at Santech Company.
+site_author: Ishimwe Angelo Julien
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: white
+      accent: amber
+      toggle:
+        icon: material/brightness-4
+        name: Switch to dark mode
+    - scheme: slate
+      primary: black
+      accent: amber
+      toggle:
+        icon: material/brightness-7
+        name: Switch to light mode
+  font:
+    text: Nunito
+    code: Fira Code
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.footer
+    - search.highlight
+    - search.suggest
+    - search.share
+    - content.tooltips
+    - toc.follow
+  icon:
+    logo: material/briefcase-account
+    repo: fontawesome/brands/github
+
+nav:
+  - Home: index.md
+  - About Me: about.md
+  - Skills: skills.md
+  - Assessments:
+      - Overview: assessments/index.md
+      - Assessment 1: assessments/assessment-1.md
+      - Assessment 2: assessments/assessment-2.md
+      - Assessment 3: assessments/assessment-3.md
+  - Contact: contact.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+
+extra:
+  social:
+    - icon: fontawesome/solid/location-dot
+      link: "#"
+      name: Kigali City, Rwanda
