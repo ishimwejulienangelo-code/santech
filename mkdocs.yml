@@ -45,6 +45,7 @@ nav:
       - Assessment 1: assessments/assessment-1.md
       - Assessment 2: assessments/assessment-2.md
       - Assessment 3: assessments/assessment-3.md
+      - Assessment 4: assessments/assessment-4.md
   - Contact: contact.md
 
 markdown_extensions:
